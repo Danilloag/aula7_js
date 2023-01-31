@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 07 de JS</title>
+</head>
+
+<body>
+    <h1>Corrida MACH1</h1>
+
+    <script>
+        let listaRankingCorrida = prompt(`Digite, em ordem de chegada, o nome dos corredores. Separe-os por vírgula:`);
+        let rankingCorrida = [];
+
+        let arrayRankingCorrida = listaRankingCorrida.split(",");
+        console.log(arrayRankingCorrida);
+
+        for (let i = 0; i < arrayRankingCorrida.length; i++) {
+            if (i < 3) {
+                rankingCorrida.push(`Pódio - ${i+1} - ${arrayRankingCorrida[i]}`)
+            } else {
+                rankingCorrida.push(`${i+1} - ${arrayRankingCorrida[i]}`)
+            }
+        }
+
+        alert(`O ranking da corrida foi: ${rankingCorrida}`);
+
+    </script>
+</body>
+
+</html>
